@@ -1,5 +1,7 @@
 import React from 'react'
 import CoinItem from './CoinItem'
+import { Link } from 'react-router-dom'
+import Coin from '../routes/Coin'
 import '../styles/Coins.css'
 
 const Coins = (props) => {
@@ -16,7 +18,9 @@ const Coins = (props) => {
             </div>        
             {props.coins.map(coins=>{
                 return(
-                    <CoinItem coins={coins} key={coins.id}/>
+                    <Link to={`/coin/${coins.id}`} element={<Coin/>} key={coins.id}>
+                      <CoinItem coins={coins} key={coins.id}/>
+                    </Link>
                 )
             })}
         </div>
