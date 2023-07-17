@@ -8,7 +8,7 @@ const Coins = (props) => {
   const [search,setSearch] = useState('') 
   return (
     <div className='container' >
-          <div className='search-div' style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+          <div className='search-div'>
             <input className='search' onChange={(e) => setSearch(e.target.value)} placeholder='Search' style={{ backgroundColor: '#26272b', color: 'white'}}/>
           </div>
           <div>
